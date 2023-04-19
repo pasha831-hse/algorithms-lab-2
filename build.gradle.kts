@@ -1,5 +1,11 @@
 plugins {
     id("java")
+    application
+}
+
+application {
+    mainClass.set("org.example.Main")
+    applicationDefaultJvmArgs = listOf("-Djava.compiler=NONE")
 }
 
 group = "org.example"
