@@ -2,7 +2,7 @@ package org.example;
 
 import org.example.model.Point;
 import org.example.model.Rectangle;
-import org.example.solution.BruteForceSolution;
+import org.example.solution.CompressedMapSolution;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,9 +40,12 @@ public class Main {
             points.add(point);
         }
 
-        // Create brute force solution class
+        // Create solution class
         // and save answers inside result array
-        BruteForceSolution solution = new BruteForceSolution(rectangles);
+
+//        BruteForceSolution solution = new BruteForceSolution(rectangles);
+
+        CompressedMapSolution solution = new CompressedMapSolution(rectangles);
         for (Point point : points) {
             result.add(solution.solvePoint(point));
         }
