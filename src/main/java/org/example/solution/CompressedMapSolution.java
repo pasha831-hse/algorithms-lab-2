@@ -88,10 +88,6 @@ public class CompressedMapSolution extends Solution {
                 compressPoint(compressedY, point.y)
         );
 
-        if (compressedPoint.x == compressedX.size() || compressedPoint.y == compressedY.size()) {
-            return 0;
-        }
-
         return solutionMap[compressedPoint.x][compressedPoint.y];
     }
 }
