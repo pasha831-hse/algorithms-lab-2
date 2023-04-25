@@ -1,7 +1,5 @@
 package org.example.model;
 
-import org.example.model.Point;
-
 public class Rectangle {
     public Point leftDownPoint;
     public Point rightUpPoint;

@@ -7,13 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
-public class CompressedMapSolution extends Solution {
+public class CompressedMapSolution {
+    public List<Rectangle> rectangles;
+
     private int[][] solutionMap;
-    private List<Integer> compressedX;
-    private List<Integer> compressedY;
+    protected List<Integer> compressedX;
+    protected List<Integer> compressedY;
 
     public CompressedMapSolution(List<Rectangle> rectangles) {
-        super(rectangles);
+        this.rectangles = rectangles;
+
         compressCoordinates();
         inflateSolutionMap();
     }
@@ -41,8 +44,20 @@ public class CompressedMapSolution extends Solution {
         compressedY = new ArrayList<>(new TreeSet<>(compressedY));
     }
 
-    protected int compressPoint(List<Integer> axis, int target) {
-        return rightBinSearch(axis, target);
+    private int compressPoint(List<Integer> axis, int target) {
+        int left = 0;
+        int right = axis.size() - 1;
+
+        while (left < right) {
+            int middle = (left + right + 1) / 2;
+            if (target >= axis.get(middle)) {
+                left = middle;
+            } else {
+                right = middle - 1;
+            }
+        }
+
+        return left;
     }
 
     private void inflateSolutionMap() {
@@ -67,7 +82,6 @@ public class CompressedMapSolution extends Solution {
         }
     }
 
-    @Override
     public int solvePoint(Point point) {
         if (point.x < compressedX.get(0) || point.y < compressedY.get(0)) {
             return 0;

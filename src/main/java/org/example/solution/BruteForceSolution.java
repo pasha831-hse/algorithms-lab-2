@@ -5,12 +5,13 @@ import org.example.model.Rectangle;
 
 import java.util.List;
 
-public class BruteForceSolution extends Solution {
+public class BruteForceSolution {
+    public List<Rectangle> rectangles;
+
     public BruteForceSolution(List<Rectangle> rectangles) {
-        super(rectangles);
+        this.rectangles = rectangles;
     }
 
-    @Override
     public int solvePoint(Point point) {
         int answer = 0;
 

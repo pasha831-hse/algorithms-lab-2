@@ -2,7 +2,9 @@ package org.example;
 
 import org.example.model.Point;
 import org.example.model.Rectangle;
+import org.example.solution.BruteForceSolution;
 import org.example.solution.CompressedMapSolution;
+import org.example.solution.LPSTSolution;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,10 +44,9 @@ public class Main {
 
         // Create solution class
         // and save answers inside result array
-
 //        BruteForceSolution solution = new BruteForceSolution(rectangles);
-
-        CompressedMapSolution solution = new CompressedMapSolution(rectangles);
+//        CompressedMapSolution solution = new CompressedMapSolution(rectangles);
+        LPSTSolution solution = new LPSTSolution(rectangles);
         for (Point point : points) {
             result.add(solution.solvePoint(point));
         }
