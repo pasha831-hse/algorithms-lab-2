@@ -42,17 +42,7 @@ public class CompressedMapSolution extends Solution {
     }
 
     protected int compressPoint(List<Integer> axis, int target) {
-        int left = 0;
-        int right = axis.size() - 1;
-        while (left < right) {
-            int middle = (left + right + 1) / 2;
-            if (target >= axis.get(middle)) {
-                left = middle;
-            } else {
-                right = middle - 1;
-            }
-        }
-        return left;
+        return rightBinSearch(axis, target);
     }
 
     private void inflateSolutionMap() {
