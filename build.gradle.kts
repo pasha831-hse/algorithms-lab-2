@@ -5,7 +5,7 @@ plugins {
 
 application {
     mainClass.set("org.example.Main")
-    applicationDefaultJvmArgs = listOf("-Djava.compiler=NONE")
+    applicationDefaultJvmArgs = listOf("-Xint")
 }
 
 group = "org.example"
