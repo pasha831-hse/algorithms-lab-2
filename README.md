@@ -1,12 +1,20 @@
 # Вторая лабораторная работа по алгоритмам
 
-Логин: pashamedvedev03 (pashamedvedev03@yandex.ru)
+**Логин**: pashamedvedev03 (pashamedvedev03@yandex.ru)
+
+**Решение**, которое прошло контест можно найти [тут](https://github.com/pasha831-hse/algorithms-lab-2/blob/main/src/main/java/org/example/contest/Contest.java).
 
 ![image](https://user-images.githubusercontent.com/46136468/234573265-c372dfed-f5eb-449e-9df3-d0dd0fd605c6.png)
 
+**Артефакты** (скрипт для построения графиков по результатам измерения на `Python`, сами графики в виде картинок и результаты измерений в виде текстового документа) находятся в папке [visualization](https://github.com/pasha831-hse/algorithms-lab-2/tree/main/visualization).
+
 # Особенности проекта
 
-Лабораторная выполнена на Java и собрана с помощью Gradle. Я отключил `just-in-time (JIT) compilation` для избежания кэширования часто используемых данных и оптимизации алгоритмов там, где это вовсе не нужно.
+Лабораторная выполнена на **Java** и собрана с помощью **Gradle**. 
+
+Я отключил `just-in-time (JIT) compilation` для избежания кэширования часто используемых данных и оптимизации алгоритмов там, где это вовсе не нужно.
+
+В работе присутствуют [автотесты](https://github.com/pasha831-hse/algorithms-lab-2/tree/main/src/test/java/org/example), написанные на `JUnit`, которые запускаются каждый раз при изменении `main` ветки данного репозитория.
 
 # Замеры производительности
 
