@@ -21,6 +21,17 @@ public class CompressedMapSolution {
         inflateSolutionMap();
     }
 
+    public CompressedMapSolution() {
+
+    }
+
+    public void prepare(List<Rectangle> rectangles) {
+        this.rectangles = rectangles;
+
+        compressCoordinates();
+        inflateSolutionMap();
+    }
+
     private void compressCoordinates() {
         compressedX = new ArrayList<>();
         compressedY = new ArrayList<>();

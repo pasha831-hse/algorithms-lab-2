@@ -31,6 +31,21 @@ public class LPSTSolution {
         inflateLSPT();
     }
 
+    public LPSTSolution() {
+
+    }
+
+    public void prepare(List<Rectangle> rectangles) {
+        this.rectangles = rectangles;
+
+        compressCoordinates();
+
+        roots = new ArrayList<>();
+        compressedRootsX = new ArrayList<>();
+
+        inflateLSPT();
+    }
+
     private void compressCoordinates() {
         compressedX = new ArrayList<>();
         compressedY = new ArrayList<>();

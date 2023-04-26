@@ -12,6 +12,14 @@ public class BruteForceSolution {
         this.rectangles = rectangles;
     }
 
+    public BruteForceSolution() {
+
+    }
+
+    public void prepare(List<Rectangle> rectangles) {
+        this.rectangles = rectangles;
+    }
+
     public int solvePoint(Point point) {
         int answer = 0;
 
