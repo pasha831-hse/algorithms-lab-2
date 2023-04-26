@@ -41,4 +41,52 @@ public class Benchmark {
 
         return endBenchmark - startBenchmark;
     }
+
+    public static long benchmark(
+        BruteForceSolution bruteForceSolution,
+        List<Rectangle> rectangles,
+        List<Point> points
+    ) {
+        bruteForceSolution.prepare(rectangles);
+
+        long startBenchmark = System.nanoTime();
+        for (Point point : points) {
+            bruteForceSolution.solvePoint(point);
+        }
+        long endBenchmark = System.nanoTime();
+
+        return endBenchmark - startBenchmark;
+    }
+
+    public static long benchmark(
+            CompressedMapSolution compressedMapSolution,
+            List<Rectangle> rectangles,
+            List<Point> points
+    ) {
+        compressedMapSolution.prepare(rectangles);
+
+        long startBenchmark = System.nanoTime();
+        for (Point point : points) {
+            compressedMapSolution.solvePoint(point);
+        }
+        long endBenchmark = System.nanoTime();
+
+        return endBenchmark - startBenchmark;
+    }
+
+    public static long benchmark(
+            LPSTSolution lpstSolution,
+            List<Rectangle> rectangles,
+            List<Point> points
+    ) {
+        lpstSolution.prepare(rectangles);
+
+        long startBenchmark = System.nanoTime();
+        for (Point point : points) {
+            lpstSolution.solvePoint(point);
+        }
+        long endBenchmark = System.nanoTime();
+
+        return endBenchmark - startBenchmark;
+    }
 }
